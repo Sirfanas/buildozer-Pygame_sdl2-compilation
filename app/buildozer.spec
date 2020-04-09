@@ -36,12 +36,11 @@ version = 1.0.8-dev
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,pygame_sdl2
+requirements = python2,pygame_sdl2
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
-requirements.source.pygame_sdl2 = ./recipe/pygame_sdl2
 
 # (list) Garden requirements
 #garden_requirements =
@@ -282,7 +281,7 @@ log_level = 2
 warn_on_root = 1
 
 # (str) Path to build artifact storage, absolute or relative to spec file
-# build_dir = ./.buildozer
+build_dir = ../.buildozer
 
 # (str) Path to build output (i.e. .apk, .ipa) storage
 # bin_dir = ./bin
