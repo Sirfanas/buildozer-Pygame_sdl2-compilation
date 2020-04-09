@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  buildozer:
+    image: kivy/buildozer
+    volumes:
+      - ./app:/home/user/hostcwd
+      - buildozer-data:/home/user/.buildozer
+    command: android debug
+
+  buildozer-chowner:
+    image: kivy/buildozer
+    volumes:
+      - buildozer-data:/home/user/.buildozer
+    user: root
+    entrypoint: ""
+    command: chown -R user /home/user/.buildozer
+
+volumes:
+  buildozer-data:
